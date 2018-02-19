@@ -4,6 +4,7 @@ import android.animation.ArgbEvaluator;
 import android.animation.ObjectAnimator;
 import android.app.ActionBar;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -38,16 +39,20 @@ public class SplashScreen extends AppCompatActivity {
                 colorFade.start();
                 ProgressBar pb = findViewById(R.id.pb);
                 pb.setVisibility(View.INVISIBLE);
-                Button oc = findViewById(R.id.oc);
+                Button oc = findViewById(R.id.MainAct);
                 oc.setVisibility(View.VISIBLE);
             }
         }, 3500);
+        final Button button = findViewById(R.id.MainAct);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Code here executes on main thread after user presses button
+                Intent intent = new Intent(SplashScreen.this, MainActivity.class);
+                startActivity(intent);
+                SplashScreen.this.finish();
+            }
+        });
     }
-    public void MainAct() {
-        Intent MainAct = new Intent(SplashScreen.this, MainActivity.class);
-        startActivity(MainAct);
-        SplashScreen.this.finish();
 
-    }
 
 }

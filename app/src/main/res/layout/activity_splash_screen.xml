@@ -28,7 +28,7 @@
         android:layout_centerHorizontal="true"
         android:src="@drawable/bgp"
         android:visibility="invisible"
-        android:scaleType="centerCrop"/>
+        android:scaleType="centerCrop" />
 
     <ProgressBar
         android:id="@+id/pb"
@@ -40,13 +40,15 @@
         android:layout_marginBottom="32dp"
         android:visibility="visible"/>
     <Button
-        android:id="@+id/oc"
+        android:id="@+id/MainAct"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="invisible"
-        android:text="GET YOUR COFFEE"
+        android:text="GET YOUR CUP OF AWESOMENESS"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="20dp"
-        android:onClick="MainAct"/>
+        android:layout_marginBottom="35dp"
+        android:textSize="18sp"
+        android:theme="@style/PrimaryFlatButton"
+        android:textColor="#b7cfd5"/>
 </RelativeLayout>
