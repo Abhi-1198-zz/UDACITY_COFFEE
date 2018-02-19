@@ -8,6 +8,7 @@ import android.app.AlertDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.media.MediaPlayer;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -22,6 +23,9 @@ public class SplashScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
+        final MediaPlayer ring= MediaPlayer.create(SplashScreen.this,R.raw.coffee);
+        ring.setLooping(true);
+        ring.start();
         final Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override
@@ -50,6 +54,7 @@ public class SplashScreen extends AppCompatActivity {
                 Intent intent = new Intent(SplashScreen.this, MainActivity.class);
                 startActivity(intent);
                 SplashScreen.this.finish();
+                ring.stop();
             }
         });
     }

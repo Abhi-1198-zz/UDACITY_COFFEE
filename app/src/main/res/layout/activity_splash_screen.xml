@@ -48,7 +48,7 @@
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="35dp"
-        android:textSize="18sp"
+        android:textSize="18dp"
         android:theme="@style/PrimaryFlatButton"
         android:textColor="#b7cfd5"/>
 </RelativeLayout>
