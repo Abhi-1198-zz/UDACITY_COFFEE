@@ -23,6 +23,7 @@
         android:layout_below="@+id/logo"
         android:textSize="20sp"/>
     <HorizontalScrollView
+        android:id="@+id/hsv"
         android:layout_width="match_parent"
         android:layout_height="200sp"
         android:layout_marginTop="130dp">
@@ -85,4 +86,26 @@
         </LinearLayout>
     </HorizontalScrollView>
 
+    <RelativeLayout
+        android:id="@+id/widget38"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="108px"
+        android:layout_y="87px"
+        android:layout_below="@+id/hsv"
+        >
+        <View android:id="@+id/separator"
+            android:background="#ffffff"
+            android:layout_width = "fill_parent"
+            android:layout_height="1dip"
+            android:layout_centerVertical ="true"
+            android:layout_alignParentTop="true"/>
+        <ImageView
+            android:id="@+id/widget39"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/separator"
+            android:layout_alignParentRight="true"
+            />
+    </RelativeLayout>
 </RelativeLayout>
