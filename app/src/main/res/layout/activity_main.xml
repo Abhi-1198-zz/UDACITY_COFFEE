@@ -26,7 +26,7 @@
         android:id="@+id/hsv"
         android:layout_width="match_parent"
         android:layout_height="200sp"
-        android:layout_marginTop="130dp">
+        android:layout_marginTop="180dp">
         <LinearLayout
             android:id="@+id/linear"
             android:layout_width="wrap_content"
@@ -93,11 +93,13 @@
         android:layout_x="108px"
         android:layout_y="87px"
         android:layout_below="@+id/hsv"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="10dp"
         >
         <View android:id="@+id/separator"
             android:background="#ffffff"
             android:layout_width = "fill_parent"
-            android:layout_height="1dip"
+            android:layout_height="3dp"
             android:layout_centerVertical ="true"
             android:layout_alignParentTop="true"/>
         <ImageView
@@ -108,4 +110,47 @@
             android:layout_alignParentRight="true"
             />
     </RelativeLayout>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/widget38">
+    <TextView
+        android:id="@+id/summary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffff"
+        android:text="YOUR BILL SUMMARY"
+        android:layout_centerHorizontal="true"
+        android:textSize="20dp"
+        android:layout_margin="8dp"
+        />
+    <TextView
+        android:id="@+id/subtotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Subtotal"
+        android:layout_below="@+id/summary"
+        android:textColor="#ffff"
+        android:textSize="20dp"
+        android:layout_margin="8dp"/>
+    <TextView
+        android:id="@+id/gst"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GST= 14%"
+        android:layout_below="@+id/subtotal"
+        android:textColor="#ffff"
+        android:textSize="20dp"
+        android:layout_margin="8dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/finalbill"
+        android:text="Final Amount = "
+        android:layout_below="@+id/gst"
+        android:textColor="#ffff"
+        android:textSize="20dp"
+        android:layout_margin="8dp"/>
+</RelativeLayout>
 </RelativeLayout>
