@@ -3,6 +3,8 @@ package com.example.android.starbuckscoffee;
 import android.animation.ArgbEvaluator;
 import android.animation.ObjectAnimator;
 import android.app.ActionBar;
+import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Handler;
@@ -41,4 +43,11 @@ public class SplashScreen extends AppCompatActivity {
             }
         }, 3500);
     }
+    public void MainAct() {
+        Intent MainAct = new Intent(SplashScreen.this, MainActivity.class);
+        startActivity(MainAct);
+        SplashScreen.this.finish();
+
+    }
+
 }
